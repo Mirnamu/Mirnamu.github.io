@@ -30,9 +30,16 @@
 ## 학력 및 경력 직접 수정
 
 1. `index.html`에서 `학력 및 경력: 기간`을 검색합니다.
-2. `<ul class="education-list">` 아래 각 `<li>`와 `</li>` 사이의 기간, 소속, 전공·과정 또는 직책 내용을 수정합니다.
-3. 학력이나 경력을 추가할 때는 `<li>기간 소속 전공·과정 또는 직책</li>` 한 줄을 복사해 같은 목록 안에 넣습니다.
+2. 각 `<li>` 안의 `education-date`에는 기간을, `education-detail`에는 소속·전공·과정 또는 직책을 입력합니다.
+3. 학력이나 경력을 추가할 때는 아래 `<li>` 블록을 복사해 `<ul class="education-list" role="list">` 안에 최신순으로 넣습니다. 날짜와 내용은 각각의 열에 자동 정렬되므로 공백으로 간격을 맞출 필요가 없습니다.
 4. `Commit changes`로 저장하면 자동 배포됩니다.
+
+```html
+<li>
+  <span class="education-date">2026.03 ~ 2026.09</span>
+  <span class="education-detail">University of Tennessee, Knoxville(UTK) 방문연구원</span>
+</li>
+```
 
 ## 프로젝트 직접 작성
 
