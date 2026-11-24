@@ -1,30 +1,38 @@
-# Mirnamu.github.io
+# Research Portfolio
 
-Mirnamu의 한국어 개인 소개·포트폴리오입니다.
+대학원생을 위한 간결한 개인 포트폴리오입니다.
 
 - 웹사이트: https://mirnamu.github.io/
-- 저장소: https://github.com/Mirnamu/Mirnamu.github.io
-
-## 구성
-
-- `index.html`: 소개 문구, 메뉴, 기본 프로젝트 카드, 검색·공유 메타데이터
-- `assets/style.css`: 모바일 레이아웃과 밝은/어두운 테마
-- `assets/main.js`: 테마 저장, 공개 GitHub 프로젝트 최대 6개 표시
-- `assets/favicon.svg`: 사이트 아이콘
-- `.nojekyll`: Jekyll 처리 없이 정적 파일 게시
-
-빌드나 패키지 설치가 필요하지 않습니다. `index.html`을 브라우저로 열면 기본 페이지를 볼 수 있습니다. 공개 저장소 목록은 GitHub API에서 불러오므로 인터넷 연결이 필요합니다. API 오류·요청 제한·자바스크립트 비활성화 시에도 기본 프로젝트 카드와 GitHub 링크가 남습니다. 개인 연락처나 비공개 저장소는 표시하지 않습니다.
+- 배포: GitHub Pages, `main` 브랜치의 `/ (root)`
+- 별도 빌드, 패키지 설치, JavaScript 실행 없이 표시됩니다.
 
 ## 내용 수정
 
-소개 문구와 제목은 `index.html`, 색상은 `assets/style.css`의 `:root`에서 수정합니다. 공개 프로젝트 목록은 페이지 방문 시 자동으로 불러옵니다. 포크와 보관된 저장소는 제외하고, 최근 코드 업데이트 순으로 표시합니다.
+**`index.html` 파일 하나에서 내용과 디자인을 수정합니다.**
 
-다른 계정에 재사용하려면 `index.html`의 이름·GitHub 주소·`og:url`과 `assets/main.js`의 `username`을 함께 바꾸세요.
+이름, 소속, 전공, 연구실, 이메일, 학력 세부사항, 연구 관심 분야는 공란입니다. 각 위치에 한국어 HTML 주석이 있으므로 검색해서 채우면 됩니다.
 
-## GitHub Pages
+| 수정할 내용 | 검색할 문구 |
+| --- | --- |
+| 이름 | `이름: 아래 p 태그` |
+| 소속·전공·연구실·이메일 | `profile-details` 아래의 HTML |
+| 자기소개 | `소개: 아래 문장` |
+| 학교·학과·과정·재학 기간 | `학력: 기간` |
+| 연구 관심 분야 | `연구 분야: 아래` |
+| 프로젝트 제목·설명·링크 | `프로젝트: article` |
+| 논문·발표 섹션 | `논문·발표를 추가할 때` |
 
-이 저장소의 기존 `main` 브랜치 게시 설정을 사용합니다. `main`에 변경 사항을 커밋하면 GitHub Pages의 빌드 및 배포가 실행됩니다. 설정은 **Settings → Pages → Deploy from a branch → main → / (root)** 입니다.
+예를 들어 `<p class="profile-name" aria-label="이름"></p>`의 태그 사이에 이름을 입력합니다. 공란의 `<dd>` 안에 있는 주석을 실제 정보로 바꾸면 해당 내용이 표시됩니다. 입력한 내용은 공개되므로 공개할 정보만 기재하세요.
 
-배포 상태는 저장소의 **Actions → pages build and deployment**에서 확인할 수 있습니다.
+프로젝트는 공개 저장소에서 확인된 Playfair 암호화 과제를 표시합니다. 연구 실적이나 학위 정보는 임의로 추가하지 않았습니다. 논문·발표 섹션은 실제 내용을 넣을 때 주석을 해제해서 사용할 수 있습니다.
 
-[GitHub Pages 공식 문서](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+## 디자인 및 파일
+
+- 흰 배경, 남색 제목 영역, 왼쪽 프로필, 오른쪽 본문
+- 소개 / 학력 / 연구 관심 분야 / 프로젝트
+- 모바일에서는 한 열로 표시
+- `index.html` 안의 `<style>`에 모든 스타일 포함
+- `.nojekyll`은 정적 페이지 배포용 파일
+- 기존 `assets/` 파일은 이전 버전 리소스이며 현재 페이지에서는 사용하지 않음
+
+`index.html`을 브라우저에서 직접 열어 확인할 수 있습니다. GitHub에서 파일을 수정하고 `main`에 커밋하면 자동 배포됩니다. 배포 결과는 저장소의 **Actions → pages build and deployment**에서 확인하세요.
