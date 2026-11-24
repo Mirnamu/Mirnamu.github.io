@@ -56,6 +56,7 @@
     .section-english { font-size: .8125rem; color: var(--muted); letter-spacing: .025em; }
     .intro { color: #4c5c6d; line-height: 1.95; }
     .education-row { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 1.5rem; }
+    .education-row + .education-row { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
     .education-period { color: var(--muted); font-size: .875rem; }
     .education-period .blank { min-height: 2rem; }
     h3 { font-size: 1.0625rem; line-height: 1.6; font-weight: 650; }
@@ -147,14 +148,35 @@
       </section>
       <section class="content-section" id="education" aria-labelledby="education-title">
         <div class="section-heading"><h2 id="education-title">학력</h2><span class="section-english">Education</span></div>
-        <!-- 학력: 기간, 학교, 전공을 채우세요. 필요하면 education-row를 복사하세요. -->
+        <!-- 학력: 기간, 학교, 전공을 수정하세요. 추가하려면 education-row 전체를 복사하세요.
+             기간은 꺾쇠 없이 글자만 입력하세요. 예: 2025 – 현재 -->
         <div class="education-row">
-          <div class="education-period"><p>기간</p><p class="blank"><2025 – 현재 ></p></div>
+          <div class="education-period"><p>기간</p><p class="blank">2025 – 현재</p></div>
           <div>
-            <h3>석박통합과정 재학</h3>
+            <h3>한양대학교</h3>
             <dl class="education-fields">
-              <div><dt>학교</dt><dd class="blank">한양대학교</dd></div>
               <div><dt>학과 · 과정</dt><dd class="blank">전기공학과 · 석박통합과정</dd></div>
+              <div><dt>학적</dt><dd class="blank">편입 · 재학</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="education-row">
+          <div class="education-period"><p>기간</p><p class="blank">2024 – 2025</p></div>
+          <div>
+            <h3>인천대학교</h3>
+            <dl class="education-fields">
+              <div><dt>학과</dt><dd class="blank">전기공학과</dd></div>
+              <div><dt>학적</dt><dd class="blank">편입으로 인한 자퇴</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="education-row">
+          <div class="education-period"><p>기간</p><p class="blank">2018 – 2024</p></div>
+          <div>
+            <h3>안양대학교</h3>
+            <dl class="education-fields">
+              <div><dt>주전공</dt><dd class="blank">컴퓨터공학전공</dd></div>
+              <div><dt>복수전공</dt><dd class="blank">정보전기전자공학전공</dd></div>
             </dl>
           </div>
         </div>
