@@ -69,7 +69,6 @@
     .publication-title { margin: 0; font-size: 1rem; font-weight: 650; line-height: 1.7; }
     .publication-venue { margin-top: .35rem; color: #536272; }
     .publication-meta { margin-top: .4rem; font-size: .875rem; color: var(--muted); }
-    .publication-status { margin-bottom: .25rem; font-size: .875rem; font-weight: 650; color: var(--accent); }
     .site-footer { border-top: 1px solid var(--line); }
     .footer-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: .8125rem; }
     @media (max-width: 800px) {
@@ -191,21 +190,26 @@
           </dl>
         </article>
       </section>
-      <!-- 논문 기록: 각 publication 항목을 수정하거나 복사하세요. 게재 기록은 최신순이며 제출·작성 중인 논문은 별도로 표시합니다. -->
+      <!-- 논문 기록: 각 publication 항목을 수정하거나 복사하세요. 저널과 컨퍼런스를 구분하고 각 목록을 최신순으로 표시합니다. -->
       <section class="content-section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading"><h2 id="publications-title">논문 기록</h2><span class="section-english">Publications</span></div>
         <div class="publication-group">
-          <h3>게재 논문 및 학술대회</h3>
+          <h3>저널</h3>
+          <ul class="publication-list">
+            <li class="publication">
+              <h4 class="publication-title">자율 이동 및 협력형 폐기물 이송 로봇</h4>
+              <p class="publication-venue">제어로봇시스템학회 논문지, 제31권 제9호, pp. 1044-1058, 2025</p>
+              <p class="publication-meta">2025.09.01 · 공동저자 · 저자 순서 2/8 · 국내 등재학술지 · <a class="text-link" href="https://doi.org/10.5302/J.ICROS.2025.25.0159" aria-label="자율 이동 및 협력형 폐기물 이송 로봇 DOI">DOI</a></p>
+            </li>
+          </ul>
+        </div>
+        <div class="publication-group">
+          <h3>컨퍼런스</h3>
           <ul class="publication-list">
             <li class="publication">
               <h4 class="publication-title">Hierarchical 6D Pose Estimation Strategy for Mobile Manipulator</h4>
               <p class="publication-venue">2026 International Conference on Artificial Intelligence in Information and Communication (ICAIIC), 2026</p>
               <p class="publication-meta">2026.03.31 · 공동저자 · 저자 순서 2/3 · SCOPUS · <a class="text-link" href="https://doi.org/10.1109/ICAIIC68212.2026.11454278" aria-label="Hierarchical 6D Pose Estimation Strategy for Mobile Manipulator DOI">DOI</a></p>
-            </li>
-            <li class="publication">
-              <h4 class="publication-title">자율 이동 및 협력형 폐기물 이송 로봇</h4>
-              <p class="publication-venue">제어로봇시스템학회 논문지, 제31권 제9호, pp. 1044-1058, 2025</p>
-              <p class="publication-meta">2025.09.01 · 공동저자 · 저자 순서 2/8 · 국내 등재학술지 · <a class="text-link" href="https://doi.org/10.5302/J.ICROS.2025.25.0159" aria-label="자율 이동 및 협력형 폐기물 이송 로봇 DOI">DOI</a></p>
             </li>
             <li class="publication">
               <h4 class="publication-title">Dual BLDC Motor 유성기어를 위한 Sliding Mode Control</h4>
@@ -231,22 +235,6 @@
               <h4 class="publication-title">자율주행 모빌리티를 위한 Ultra-Wideband 기반 객체 추종 알고리즘</h4>
               <p class="publication-venue">대한전기학회 학술대회 논문집 (ICS 2024 정보 및 제어 심포지엄 초록집), pp. 54-55, 2024</p>
               <p class="publication-meta">2024.04 · 공동저자 · 저자 순서 3/4</p>
-            </li>
-          </ul>
-        </div>
-        <div class="publication-group">
-          <h3>제출 및 작성 중</h3>
-          <ul class="publication-list">
-            <li class="publication">
-              <p class="publication-status">제출</p>
-              <h4 class="publication-title">From Prompts to Feedback: A Control-Inspired Framework for Engineering LLM Workflows</h4>
-              <p class="publication-venue">투고처: ICT Express</p>
-              <p class="publication-meta">주저자 · 저자 순서 1/3</p>
-            </li>
-            <li class="publication">
-              <p class="publication-status">작성 중</p>
-              <h4 class="publication-title">Design, Modeling, and Experimental Validation of a Hollow-Shaft BLDC-Based Dual-Motor Planetary Actuator</h4>
-              <p class="publication-meta">주저자 · 저자 순서 1/2</p>
             </li>
           </ul>
         </div>
