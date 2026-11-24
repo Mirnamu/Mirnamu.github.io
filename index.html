@@ -55,12 +55,9 @@
     h2 { font-size: 1.3rem; line-height: 1.5; font-weight: 650; letter-spacing: -.03em; }
     .section-english { font-size: .8125rem; color: var(--muted); letter-spacing: .025em; }
     .intro { color: #4c5c6d; line-height: 1.95; }
-    .education-row { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 1.5rem; }
-    .education-row + .education-row { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
-    .education-period { color: var(--muted); font-size: .875rem; }
-    .education-period .blank { min-height: 2rem; }
+    .education-list { margin: 0; padding-left: 1.25rem; }
+    .education-list li + li { margin-top: .7rem; }
     h3 { font-size: 1.0625rem; line-height: 1.6; font-weight: 650; }
-    .education-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: .9rem; }
     .interest-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .project { padding-block: .1rem .4rem; }
     .project + .project { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
@@ -71,8 +68,6 @@
     .footer-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: .8125rem; }
     @media (max-width: 800px) {
       .page-layout { grid-template-columns: 190px minmax(0, 1fr); gap: 2.5rem; }
-      .education-row { grid-template-columns: 1fr; gap: 1rem; }
-      .education-period { max-width: 130px; }
     }
     @media (max-width: 620px) {
       .wrap { width: calc(100% - 2.5rem); }
@@ -95,7 +90,7 @@
     @media (max-width: 360px) {
       .wordmark::before { display: none; }
       .top-nav { gap: .65rem; }
-      .profile-details, .education-fields, .interest-fields { grid-template-columns: 1fr; }
+      .profile-details, .interest-fields { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -148,38 +143,12 @@
       </section>
       <section class="content-section" id="education" aria-labelledby="education-title">
         <div class="section-heading"><h2 id="education-title">학력</h2><span class="section-english">Education</span></div>
-        <!-- 학력: 기간, 학교, 전공을 수정하세요. 추가하려면 education-row 전체를 복사하세요.
-             기간은 꺾쇠 없이 글자만 입력하세요. 예: 2025 – 현재 -->
-        <div class="education-row">
-          <div class="education-period"><p>기간</p><p class="blank">2025 – 현재</p></div>
-          <div>
-            <h3>한양대학교</h3>
-            <dl class="education-fields">
-              <div><dt>학과 · 과정</dt><dd class="blank">전기공학과 · 석박통합과정</dd></div>
-              <div><dt>학적</dt><dd class="blank">편입 · 재학</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="education-row">
-          <div class="education-period"><p>기간</p><p class="blank">2024 – 2025</p></div>
-          <div>
-            <h3>인천대학교</h3>
-            <dl class="education-fields">
-              <div><dt>학과</dt><dd class="blank">전기공학과</dd></div>
-              <div><dt>학적</dt><dd class="blank">편입으로 인한 자퇴</dd></div>
-            </dl>
-          </div>
-        </div>
-        <div class="education-row">
-          <div class="education-period"><p>기간</p><p class="blank">2018 – 2024</p></div>
-          <div>
-            <h3>안양대학교</h3>
-            <dl class="education-fields">
-              <div><dt>주전공</dt><dd class="blank">컴퓨터공학전공</dd></div>
-              <div><dt>복수전공</dt><dd class="blank">정보전기전자공학전공</dd></div>
-            </dl>
-          </div>
-        </div>
+        <!-- 학력: 기간, 학교, 전공을 li 태그 안에서 수정하세요. 추가하려면 li 한 줄을 복사하세요. -->
+        <ul class="education-list">
+          <li>2018 - 2024 안양대학교 컴퓨터공학전공(주전공), 정보전기전자공학전공(복수전공)</li>
+          <li>2024 - 2025 인천대학교 전기공학과 (편입으로 인한 자퇴)</li>
+          <li>2025 ~ 현재 한양대학교 전기공학과 석박통합과정 (편입)</li>
+        </ul>
       </section>
       <section class="content-section" id="research" aria-labelledby="research-title">
         <div class="section-heading"><h2 id="research-title">연구 관심 분야</h2><span class="section-english">Research interests</span></div>
