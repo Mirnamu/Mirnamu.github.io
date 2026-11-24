@@ -36,6 +36,7 @@
     .masthead-description { color: #d8e2eb; font-size: 1rem; }
     .page-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 4.4rem; padding-block: 3.5rem 5rem; align-items: start; }
     .profile { position: sticky; top: 2rem; }
+    .profile-photo { display: block; width: min(184px, 100%); height: auto; margin-top: 1rem; border: 1px solid var(--line); border-radius: 6px; }
     .side-label { font-size: .8125rem; color: var(--muted); font-weight: 650; letter-spacing: .12em; }
     .profile-name { min-height: 3rem; margin-top: .3rem; border-bottom: 1px solid var(--line); font-size: 1.45rem; font-weight: 650; }
     .profile-role { margin-top: .8rem; color: var(--accent); font-size: .9375rem; }
@@ -81,6 +82,7 @@
       .masthead-inner { padding-block: 2.5rem 2.7rem; }
       .page-layout { grid-template-columns: 1fr; gap: 2.7rem; padding-block: 2.2rem 3.5rem; }
       .profile { position: static; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
+      .profile-photo { width: 160px; }
       .profile-name { max-width: 260px; }
       .profile-details { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; margin-top: 1.2rem; }
       .profile-details > div { margin-top: 0; }
@@ -122,6 +124,8 @@
   <main class="page-layout wrap" id="main">
     <aside class="profile" aria-label="프로필">
       <p class="side-label">PROFILE</p>
+      <!-- 프로필 사진: profile.jpg를 새 사진으로 교체하세요. -->
+      <img class="profile-photo" src="./profile.jpg" alt="프로필 사진" width="413" height="531" decoding="async">
       <!-- 이름: 아래 p 태그 안에 이름을 입력하세요. -->
       <p class="profile-name" aria-label="안양진(Yang-Jin An"></p>
       <p class="profile-role">Integrated M.S./Ph.D.<br>석박통합과정</p>
