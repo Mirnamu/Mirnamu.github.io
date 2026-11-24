@@ -64,9 +64,7 @@
     .project { padding-block: .1rem .4rem; }
     .project + .project { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
     .project-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
-    .project-wide { grid-column: 1 / -1; }
     .project-name { font-size: 1.0625rem; font-weight: 650; }
-    .project-summary { min-height: 3.2rem; }
     .project-description { margin-top: .6rem; color: #536272; }
     .site-footer { border-top: 1px solid var(--line); }
     .footer-inner { min-height: 88px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; color: var(--muted); font-size: .8125rem; }
@@ -173,7 +171,11 @@
              이 영역은 직접 작성한 내용만 표시합니다. -->
         <article class="project" aria-label="프로젝트">
           <dl class="project-fields">
-            <div class="project-wide">
+            <div>
+              <dt>기관</dt>
+              <dd class="blank"><!-- 기관명 --></dd>
+            </div>
+            <div>
               <dt>프로젝트명</dt>
               <dd class="blank project-name"><!-- 프로젝트 제목 --></dd>
             </div>
@@ -182,16 +184,8 @@
               <dd class="blank"><!-- 프로젝트 수행 기간 --></dd>
             </div>
             <div>
-              <dt>담당 역할</dt>
+              <dt>역할</dt>
               <dd class="blank"><!-- 본인이 담당한 역할 --></dd>
-            </div>
-            <div class="project-wide">
-              <dt>프로젝트 설명</dt>
-              <dd class="blank project-summary"><!-- 프로젝트의 목적, 수행 내용, 결과 --></dd>
-            </div>
-            <div class="project-wide">
-              <dt>사용 기술</dt>
-              <dd class="blank"><!-- 사용한 기술, 도구, 방법 --></dd>
             </div>
           </dl>
         </article>
