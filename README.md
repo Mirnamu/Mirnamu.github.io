@@ -21,7 +21,7 @@
 | 학력·경력·기간 | `학력 및 경력: 기간` |
 | 연구 관심 분야 | `연구 분야: 아래` |
 | 프로젝트 기관·프로젝트명·기간·역할 | `프로젝트: 아래 article` |
-| 논문 제목·게재지·날짜·역할·DOI | `논문 기록: 각 publication` |
+| 논문 제목·저자·게재지·날짜·역할·DOI | `논문 기록: 각 publication` |
 
 예를 들어 `<p class="profile-name" aria-label="이름"></p>`의 태그 사이에 이름을 입력합니다. 공란의 `<dd>` 안에 있는 주석을 실제 정보로 바꾸면 해당 내용이 표시됩니다. 입력한 내용은 공개되므로 공개할 정보만 기재하세요.
 
@@ -50,11 +50,27 @@
 ## 논문 기록 직접 수정
 
 1. `index.html`에서 `논문 기록: 각 publication`을 검색합니다.
-2. 각 `<li class="publication">` 안의 제목, 게재지, 날짜, 역할, 저자 순서, DOI 링크를 수정합니다.
+2. 각 `<li class="publication">` 안의 제목, 저자 명단, 게재지, 날짜, 역할, DOI 링크를 수정합니다. 저자 이름은 게재된 순서를 유지하고, 본인 이름은 `<strong>`으로 강조합니다.
 3. 논문을 추가할 때는 `<li class="publication">`부터 `</li>`까지 복사합니다. 저널 또는 컨퍼런스 그룹에 게재 기록을 최신순으로 넣습니다.
 4. `Commit changes`로 저장하면 자동 배포됩니다.
 
 원본: [노션 논문 기록](https://app.notion.com/p/3deecb174d2a8056b6b6cfd6a97f6ba9). 2026-11-24에 내용을 반영했으며, 노션 변경사항이 사이트에 자동 동기화되지는 않습니다.
+
+## 논문 저자 확인 근거
+
+2026-11-24에 공개된 학회 프로그램, 논문집 목차, 대학·연구실 자료의 저자 명단을 확인해 게재 순서로 반영했습니다. 영문 논문은 확인 자료의 영문 이름 표기를 따릅니다.
+
+| 논문 | 확인 자료 |
+| --- | --- |
+| 자율 이동 및 협력형 폐기물 이송 로봇 | [한양대학교 ScholarWorks](https://hanyang.scholarworks.kr/item/e399a565-e155-4ff4-be9f-7be88882e05a) |
+| Hierarchical 6D Pose Estimation Strategy for Mobile Manipulator | [ICAIIC 2026 공식 프로그램 P3-2](https://www.manuscriptlink.com/society/kics/conference/icaiic2026/programBook) |
+| Dual BLDC Motor 유성기어를 위한 Sliding Mode Control | [ICROS 2025 공식 프로그램 TA06-1](https://sigongji25a.icros.org/admin/proceedings/TableOfContents_web_2.asp) |
+| Integration of MediaPipe and L2CS-Net for Driver Drowsiness Detection and Gaze Tracking | [ICEIC 2025 논문집 목차, PDF 7쪽](https://www.proceedings.com/content/079/079014webtoc.pdf) |
+| UWB 센서와 Depth 카메라를 이용한 파티클 필터 기반의 객체 위치 추정 | [한국자동차공학회 2024 추계학술대회 자료](https://www.ksae.org/journal_list/search_index.php?gubun=2&issue=0&kwon_title=JUVDJUI2JTk0JUVBJUIzJTg0JUVEJTk1JTk5JUVDJTg4JUEwJUVCJThDJTgwJUVEJTlBJThD&mode=list&month=11&number=0&page=36&year=2024) |
+| MediaPipe와 L2CS-Net을 활용한 운전자 졸음 감지 시스템 설계 | [한국자동차공학회 2024 추계학술대회 자료](https://www.ksae.org/journal_list/search_index.php?gubun=2&issue=0&kwon_title=JUVDJUI2JTk0JUVBJUIzJTg0JUVEJTk1JTk5JUVDJTg4JUEwJUVCJThDJTgwJUVEJTlBJThD&mode=list&month=11&number=0&page=36&year=2024) |
+| 자율주행 모빌리티를 위한 Ultra-Wideband 기반 객체 추종 알고리즘 | [UNICON 연구실 공식 학술대회 목록](https://unicon.hanyang.ac.kr/publications?cpage=4&ctab=Domestic&cyear=all&jpage=1&jtab=SCIE&jyear=2021) |
+
+「자율 이동 및 협력형 폐기물 이송 로봇」의 저자는 공식 연구성과 자료에서 9명으로 확인되어, 이전 노션 기록의 `2/8` 표기를 전체 저자 9명의 명단으로 교체했습니다.
 
 ## 디자인 및 파일
 
