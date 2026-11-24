@@ -55,8 +55,12 @@
     h2 { font-size: 1.3rem; line-height: 1.5; font-weight: 650; letter-spacing: -.03em; }
     .section-english { font-size: .8125rem; color: var(--muted); letter-spacing: .025em; }
     .intro { color: #4c5c6d; line-height: 1.95; }
-    .education-list { margin: 0; padding-left: 1.25rem; }
-    .education-list li + li { margin-top: .7rem; }
+    .education-list { list-style: none; margin: 0; padding: 0; }
+    .education-list li { display: grid; grid-template-columns: 10rem minmax(0, 1fr); column-gap: 1.25rem; align-items: baseline; padding-block: .85rem; }
+    .education-list li:first-child { padding-top: 0; }
+    .education-list li + li { border-top: 1px solid var(--line); }
+    .education-date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .education-detail { min-width: 0; }
     h3 { font-size: 1.0625rem; line-height: 1.6; font-weight: 650; }
     .interest-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
     .project { padding-block: .1rem .4rem; }
@@ -91,6 +95,8 @@
       .profile-links { margin-top: 1.4rem; }
       .side-nav { display: none; }
       .section-heading { margin-bottom: 1.1rem; }
+      .education-list li { grid-template-columns: 8.75rem minmax(0, 1fr); column-gap: 1rem; }
+      .education-date { font-size: .8125rem; }
       .project-fields { grid-template-columns: 1fr; }
       .footer-inner { min-height: 90px; padding-block: 1.2rem; }
     }
@@ -152,14 +158,32 @@
       </section>
       <section class="content-section" id="education" aria-labelledby="education-title">
         <div class="section-heading"><h2 id="education-title">학력 및 경력</h2><span class="section-english">Education &amp; Experience</span></div>
-        <!-- 학력 및 경력: 기간, 소속, 전공·과정을 li 태그 안에서 수정하세요. 추가하려면 li 한 줄을 복사하세요. -->
-        <ul class="education-list">
-          <li>2026.03 ~ 현재 한양대학교 산업과학연구소 연구원</li>
-          <li>2026.03 ~ 2026.09 University of Tennessee, Knoxville(UTK) 방문연구원</li>
-          <li>2025.03 ~ 현재      한양대학교 전기공학과 석박통합과정</li>
-          <li>2024.03 - 2025.02   인천대학교 전기공학과 석사과정</li>
-          <li>2018.03 - 2024.02   안양대학교 컴퓨터공학전공 (주전공)</li>
-          <li>2018.03 - 2024.02   안양대학교 정보전기전자공학전공 (복수전공)</li>
+        <!-- 학력 및 경력: 기간은 education-date, 내용은 education-detail에서 수정하세요. 추가하려면 li 블록을 복사하세요. -->
+        <ul class="education-list" role="list">
+          <li>
+            <span class="education-date">2026.03 ~ 현재</span>
+            <span class="education-detail">한양대학교 산업과학연구소 연구원</span>
+          </li>
+          <li>
+            <span class="education-date">2026.03 ~ 2026.09</span>
+            <span class="education-detail">University of Tennessee, Knoxville(UTK) 방문연구원</span>
+          </li>
+          <li>
+            <span class="education-date">2025.03 ~ 현재</span>
+            <span class="education-detail">한양대학교 전기공학과 석박통합과정</span>
+          </li>
+          <li>
+            <span class="education-date">2024.03 - 2025.02</span>
+            <span class="education-detail">인천대학교 전기공학과 석사과정</span>
+          </li>
+          <li>
+            <span class="education-date">2018.03 - 2024.02</span>
+            <span class="education-detail">안양대학교 컴퓨터공학전공 (주전공)</span>
+          </li>
+          <li>
+            <span class="education-date">2018.03 - 2024.02</span>
+            <span class="education-detail">안양대학교 정보전기전자공학전공 (복수전공)</span>
+          </li>
         </ul>
       </section>
       <section class="content-section" id="research" aria-labelledby="research-title">
