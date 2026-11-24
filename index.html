@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mirnamu의 개인 포트폴리오. 만들고, 배우고, 기록하는 공간입니다. 공개 프로젝트와 GitHub 활동을 만나보세요.">
+    <meta name="theme-color" content="#101511">
+    <meta property="og:title" content="Mirnamu — 만들고, 배우고, 기록합니다">
+    <meta property="og:description" content="Mirnamu의 개인 소개와 공개 프로젝트를 담은 포트폴리오.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mirnamu.github.io/">
+    <title>Mirnamu — 만들고, 배우고, 기록합니다</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script>
+      try {
+        var savedTheme = localStorage.getItem('mirnamu-theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.dataset.theme = savedTheme;
+      } catch (_) {}
+    </script>
+    <script src="./assets/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 바로가기</a>
+    <header class="site-header wrap">
+      <a class="wordmark" href="#home" aria-label="Mirnamu 홈"><span aria-hidden="true">m/</span> mirnamu</a>
+      <nav aria-label="주 메뉴">
+        <a href="#projects">프로젝트</a>
+        <a href="#about">소개</a>
+        <button class="theme-toggle" type="button" aria-label="밝은 테마로 전환" hidden>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A PERSONAL SPACE BY MIRNAMU</p>
+          <h1 id="hero-title">만들고,<br>배우고,<br><span>기록합니다.</span></h1>
+          <p class="intro">안녕하세요, <strong>Mirnamu</strong>입니다.<br>작은 아이디어가 프로젝트가 되는 과정,<br class="desktop-break"> 그 여정을 이곳에 담습니다.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">프로젝트 둘러보기</a>
+            <a class="button secondary" href="https://github.com/Mirnamu">GitHub 프로필</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-top"><span>THE DIGITAL GARDEN</span><span>EST. 2026</span></div>
+          <svg class="garden" viewBox="0 0 440 440" fill="none">
+            <circle cx="220" cy="220" r="166" stroke="currentColor" stroke-opacity=".14"/>
+            <circle cx="220" cy="220" r="118" stroke="currentColor" stroke-opacity=".12" stroke-dasharray="3 9"/>
+            <path d="M54 220h332M220 54v332" stroke="currentColor" stroke-opacity=".12"/>
+            <path d="M220 336V220" stroke="currentColor" stroke-width="5"/>
+            <path d="M219 244C149 244 108 206 108 136c70 0 111 38 111 108Z" fill="currentColor"/>
+            <path d="M221 210c0-72 42-110 111-110 0 72-42 110-111 110Z" fill="currentColor" fill-opacity=".6"/>
+            <path d="m135 163 84 81m2-34 83-83" stroke="var(--art-bg)" stroke-width="2"/>
+            <path d="M184 336h72" stroke="currentColor" stroke-width="2"/>
+            <circle cx="220" cy="54" r="5" fill="currentColor"/>
+            <circle cx="386" cy="220" r="4" fill="currentColor" fill-opacity=".5"/>
+          </svg>
+          <div class="art-bottom"><span>IDEAS TAKE ROOT.<br>PROJECTS GROW.</span><span class="art-monogram">m/</span></div>
+        </div>
+      </section>
+
+      <div class="section-divider wrap"><span>IDEA</span><span class="divider-line"></span><span>BUILD</span><span class="divider-line"></span><span>LEARN</span><span class="divider-line"></span><span>REPEAT</span></div>
+
+      <section class="projects wrap section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">PROJECTS</p><h2 id="projects-title">아이디어를 실제로.</h2></div>
+          <a class="text-link" href="https://github.com/Mirnamu?tab=repositories">GitHub에서 모두 보기</a>
+        </div>
+        <p class="section-description">GitHub에 공개한 프로젝트를 최근 업데이트 순으로 소개합니다.</p>
+        <p id="project-status" class="project-status" role="status" hidden></p>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card">
+            <div class="card-top"><span class="project-type">PERSONAL WEBSITE</span><span class="code-symbol" aria-hidden="true">&lt;/&gt;</span></div>
+            <h3><a href="https://github.com/Mirnamu/Mirnamu.github.io">Mirnamu.github.io</a></h3>
+            <p>개인 소개와 공개 프로젝트를 담은 이 포트폴리오의 소스 코드입니다.</p>
+            <div class="card-meta"><span>HTML · CSS · JavaScript</span><span>GitHub Pages</span></div>
+          </article>
+        </div>
+        <noscript><p class="project-status">더 많은 프로젝트는 <a href="https://github.com/Mirnamu?tab=repositories">GitHub 저장소 목록</a>에서 확인할 수 있습니다.</p></noscript>
+      </section>
+
+      <section class="about wrap section" id="about" aria-labelledby="about-title">
+        <div class="about-title"><p class="eyebrow">ABOUT ME</p><h2 id="about-title">반갑습니다.<br>Mirnamu입니다.</h2><span class="about-handle">@Mirnamu</span></div>
+        <div class="about-copy">
+          <p class="about-lead">생각을 코드로 옮기고,<br>그 과정에서 배운 것을 남깁니다.</p>
+          <p>이곳은 제가 만든 것들을 모아 두는 작은 공간입니다. 완성된 결과뿐 아니라, 새로운 시도와 배움의 과정도 차곡차곡 채워가려 합니다.</p>
+          <p>프로젝트의 코드와 최근 활동은 GitHub에서 확인할 수 있습니다.</p>
+          <a class="button secondary" href="https://github.com/Mirnamu">GitHub에서 만나기</a>
+        </div>
+      </section>
+
+      <section class="closing wrap" aria-labelledby="closing-title">
+        <p class="eyebrow">ALWAYS A WORK IN PROGRESS</p>
+        <h2 id="closing-title">다음 아이디어도,<br>여기에서 자랍니다.</h2>
+        <a class="text-link" href="https://github.com/Mirnamu?tab=repositories">더 많은 프로젝트 보기</a>
+      </section>
+    </main>
+
+    <footer class="site-footer wrap"><a class="wordmark" href="#home">mirnamu<span aria-hidden="true">/</span></a><p>© <span id="year">2026</span> Mirnamu</p><a href="https://github.com/Mirnamu/Mirnamu.github.io">이 사이트의 코드</a></footer>
+  </body>
+</html>
