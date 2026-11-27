@@ -75,7 +75,11 @@
     .certification-table td { color: #536272; }
     .certification-table .certification-group-label th { padding-top: 1.1rem; border-bottom: 0; color: var(--accent); font-size: .875rem; font-weight: 650; }
     .certification-date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .interest-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .research-intro { margin-bottom: 1rem; color: #536272; font-size: .9375rem; line-height: 1.85; }
+    .research-interests > div { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 1rem; padding-block: .65rem; align-items: baseline; }
+    .research-interests > div + div { border-top: 1px solid var(--line); }
+    .research-interests dt { color: var(--ink); font-size: .875rem; font-weight: 650; }
+    .research-interests dd { color: #536272; font-size: .875rem; line-height: 1.85; }
     .project { padding-block: .85rem; }
     .project + .project { border-top: 1px solid var(--line); }
     .project-title { font-size: .9375rem; font-weight: 650; line-height: 1.65; }
@@ -113,6 +117,7 @@
       .section-heading { margin-bottom: 1.1rem; }
       .education-list li { grid-template-columns: 8.75rem minmax(0, 1fr); column-gap: 1rem; }
       .education-date { font-size: .8125rem; }
+      .research-interests > div { grid-template-columns: 1fr; gap: .2rem; }
       .project-meta { flex-wrap: wrap; }
       .project-role { flex-basis: 100%; padding-left: 0; border-left: 0; }
       .certification-table { font-size: .8125rem; }
@@ -124,7 +129,7 @@
     @media (max-width: 360px) {
       .wordmark::before { display: none; }
       .top-nav { gap: .65rem; }
-      .profile-details, .interest-fields { grid-template-columns: 1fr; }
+      .profile-details { grid-template-columns: 1fr; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     @media print {
@@ -210,8 +215,16 @@
       </section>
       <section class="content-section" id="research" aria-labelledby="research-title">
         <div class="section-heading"><h2 id="research-title">연구 관심 분야</h2><span class="section-english">Research interests</span></div>
-        <!-- 연구 분야: 아래 두 p 태그 안에 키워드 또는 설명을 입력하세요. -->
-        <div class="interest-fields"><p class="blank" aria-label="연구 관심 분야"></p><p class="blank" aria-label="연구 관심 분야"></p></div>
+        <!-- 연구 분야: research-intro는 소개 문장, 각 dt는 분야명, dd는 관심 키워드입니다. 분야를 추가하려면 div 블록을 복사하세요. -->
+        <p class="research-intro">제어, 로보틱스, 자율주행을 중심으로 로봇의 구동·인지·판단을 연결하는 기술에 관심이 있습니다. 센서 융합과 지능형 제어를 활용한 이동 로봇 및 미래 모빌리티 시스템을 탐구합니다.</p>
+        <dl class="research-interests">
+          <div><dt>제어 및 구동 시스템</dt><dd>비선형 제어 · 강인 제어 · 슬라이딩 모드 제어 · 모터 제어 · 구동 시스템 모델링</dd></div>
+          <div><dt>로보틱스</dt><dd>이동 로봇 · 서비스 로봇 · 로봇 플랫폼 설계 · 구동 메커니즘 · 로봇 하위 제어</dd></div>
+          <div><dt>자율주행 및 내비게이션</dt><dd>SLAM · Visual SLAM · 위치 추정 · 경로 계획 · 경로 추종 · 장애물 회피</dd></div>
+          <div><dt>센서 융합 및 인지</dt><dd>다중 센서 융합 · UWB 기반 위치 추정 · 비전·Depth 기반 인지 · 객체 추종 · 상태 추정</dd></div>
+          <div><dt>지능형 제어 및 학습</dt><dd>데이터 기반 제어 · 학습 기반 제어 · Few-shot Learning · 지능형 모빌리티 제어</dd></div>
+          <div><dt>미래 모빌리티</dt><dd>퍼스널 모빌리티 · 주행·비행 플랫폼 · 전동 구동 시스템 · 모터·감속기 설계</dd></div>
+        </dl>
       </section>
       <section class="content-section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading"><h2 id="projects-title">프로젝트</h2><span class="section-english">Selected projects</span></div>
