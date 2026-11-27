@@ -91,7 +91,6 @@
     .project[open] .project-summary-meta { flex-wrap: wrap; }
     .project-info { padding-bottom: .9rem; color: #536272; font-size: .875rem; }
     .project-info dl { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: .5rem; }
-    .project-source { display: inline-block; margin-top: .5rem; }
     .publication-group + .publication-group { margin-top: 2rem; }
     .publication-list { list-style: none; margin: 1rem 0 0; padding: 0; }
     .publication + .publication { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
@@ -150,7 +149,7 @@
   <a class="skip-link" href="#main">본문으로 바로가기</a>
   <header class="site-header wrap">
     <a class="wordmark" href="#top">Research Portfolio</a>
-    <nav class="top-nav" aria-label="주 메뉴"><a href="#about">소개</a><a href="#certifications">자격증</a><a href="#projects">프로젝트</a><a href="#publications">논문</a></nav>
+    <nav class="top-nav" aria-label="주 메뉴"><a href="#about">소개</a><a href="#projects">프로젝트</a><a href="#publications">논문</a><a href="#certifications">자격증</a></nav>
   </header>
   <div class="masthead" id="top">
     <div class="masthead-inner wrap">
@@ -176,7 +175,7 @@
       </dl>
       <div class="profile-links"><a class="text-link" href="https://github.com/Mirnamu">GitHub</a></div>
       <nav class="side-nav" aria-label="본문 목차">
-        <a href="#about">소개</a><a href="#education">학력 및 경력</a><a href="#certifications">자격증</a><a href="#research">연구 관심 분야</a><a href="#projects">프로젝트</a><a href="#publications">논문 기록</a>
+        <a href="#about">소개</a><a href="#education">학력 및 경력</a><a href="#research">연구 관심 분야</a><a href="#projects">프로젝트</a><a href="#publications">논문 기록</a><a href="#certifications">자격증</a>
       </nav>
     </aside>
     <div class="content">
@@ -215,55 +214,6 @@
           </li>
         </ul>
       </section>
-      <section class="content-section" id="certifications" aria-labelledby="certifications-title">
-        <div class="section-heading"><h2 id="certifications-title">자격증</h2><span class="section-english">Licenses &amp; Certifications</span></div>
-        <!-- 자격증: 각 tr 안의 자격명, 발급기관, 취득일을 수정하세요. 추가하려면 해당 분류의 tr 블록을 복사하세요. -->
-        <table class="certification-table" aria-label="자격증 발급기관 및 취득일">
-          <colgroup><col><col><col></colgroup>
-          <thead><tr><th scope="col">자격명</th><th scope="col">발급기관</th><th scope="col">취득일</th></tr></thead>
-          <tbody>
-            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운전면허</th></tr>
-            <tr>
-              <th scope="row">1종 보통</th>
-              <td>경기도남부경찰청</td>
-              <td><time class="certification-date" datetime="2018-03-09">2018.03.09</time></td>
-            </tr>
-            <tr>
-              <th scope="row">1종 대형</th>
-              <td>경기도남부경찰청</td>
-              <td><time class="certification-date" datetime="2021-02-10">2021.02.10</time></td>
-            </tr>
-            <tr>
-              <th scope="row">특수(대형견인)</th>
-              <td>경기도남부경찰청</td>
-              <td><time class="certification-date" datetime="2021-12-27">2021.12.27</time></td>
-            </tr>
-            <tr>
-              <th scope="row">특수(구난차)</th>
-              <td>경기도남부경찰청</td>
-              <td><time class="certification-date" datetime="2021-04-30">2021.04.30</time></td>
-            </tr>
-            <tr>
-              <th scope="row">2종 소형</th>
-              <td>경기도남부경찰청</td>
-              <td><time class="certification-date" datetime="2022-11-24">2022.11.24</time></td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운송 자격</th></tr>
-            <tr>
-              <th scope="row">버스운전자격증</th>
-              <td>한국교통안전공단</td>
-              <td><time class="certification-date" datetime="2020-09-24">2020.09.24</time></td>
-            </tr>
-            <tr>
-              <th scope="row">화물운송자격증</th>
-              <td>한국교통안전공단</td>
-              <td><time class="certification-date" datetime="2020-10-05">2020.10.05</time></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
       <section class="content-section" id="research" aria-labelledby="research-title">
         <div class="section-heading"><h2 id="research-title">연구 관심 분야</h2><span class="section-english">Research interests</span></div>
         <!-- 연구 분야: 아래 두 p 태그 안에 키워드 또는 설명을 입력하세요. -->
@@ -281,7 +231,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>지원: 과학기술정보통신부, 행정안전부<br>전담: 한국연구재단</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/3f31eec3-c7ea-8003-a71d-c9ffa71a66ee">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="복합에너지 시스템(MES) 및 지역에너지커뮤니티(LEC)의 설계 및 운영">
@@ -291,7 +240,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>지원: 기후에너지환경부<br>전담: 한국에너지기술평가원</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33c1eec3-c7ea-8060-b7f8-e8ceba2805e8">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="Few-shot data-driven 기반 미래 모빌리티 플랫폼의 구동, 비행 및 자율주행 제어 기법 연구">
@@ -301,7 +249,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>지원: 과학기술정보통신부<br>전담: 한국연구재단</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80da-aa0a-c935f5d6a11b">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="환자 이승 및 이동 보조 자율행동체 구현을 위한 지능 기술 개발 및 실증">
@@ -311,7 +258,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>지원: 과학기술정보통신부<br>전담: 정보통신기획평가원</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-8054-b652-e9fa6060bd76">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="초개인화 퍼스널 모빌리티 서비스 디자인 개발">
@@ -321,7 +267,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>지원: 산업통상자원부<br>전담: 한국산업기술평가관리원</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80fa-865e-fba462634407">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="Visual SLAM을 이용한 실내 자율주행 로봇 및 관제 시스템 개발">
@@ -331,7 +276,6 @@
           </summary>
           <div class="project-info">
             <dl><dt>기관</dt><dd>전담: 인천대학교</dd></dl>
-            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80b7-8025-e1776692471a">연구실 상세 페이지</a>
           </div>
         </details>
         <details class="project" aria-label="인천공항 터미널 폐기물 수집 및 이송로봇 개발">
@@ -399,6 +343,55 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section class="content-section" id="certifications" aria-labelledby="certifications-title">
+        <div class="section-heading"><h2 id="certifications-title">자격증</h2><span class="section-english">Licenses &amp; Certifications</span></div>
+        <!-- 자격증: 각 tr 안의 자격명, 발급기관, 취득일을 수정하세요. 추가하려면 해당 분류의 tr 블록을 복사하세요. -->
+        <table class="certification-table" aria-label="자격증 발급기관 및 취득일">
+          <colgroup><col><col><col></colgroup>
+          <thead><tr><th scope="col">자격명</th><th scope="col">발급기관</th><th scope="col">취득일</th></tr></thead>
+          <tbody>
+            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운전면허</th></tr>
+            <tr>
+              <th scope="row">1종 보통</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2018-03-09">2018.03.09</time></td>
+            </tr>
+            <tr>
+              <th scope="row">1종 대형</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-02-10">2021.02.10</time></td>
+            </tr>
+            <tr>
+              <th scope="row">특수(대형견인)</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-12-27">2021.12.27</time></td>
+            </tr>
+            <tr>
+              <th scope="row">특수(구난차)</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-04-30">2021.04.30</time></td>
+            </tr>
+            <tr>
+              <th scope="row">2종 소형</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2022-11-24">2022.11.24</time></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운송 자격</th></tr>
+            <tr>
+              <th scope="row">버스운전자격증</th>
+              <td>한국교통안전공단</td>
+              <td><time class="certification-date" datetime="2020-09-24">2020.09.24</time></td>
+            </tr>
+            <tr>
+              <th scope="row">화물운송자격증</th>
+              <td>한국교통안전공단</td>
+              <td><time class="certification-date" datetime="2020-10-05">2020.10.05</time></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>
