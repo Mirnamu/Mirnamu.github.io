@@ -74,10 +74,22 @@
     .certification-table .certification-group-label th { padding-top: 1.1rem; border-bottom: 0; color: var(--accent); font-size: .875rem; font-weight: 650; }
     .certification-date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .interest-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .project { padding-block: .1rem .4rem; }
-    .project + .project { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--line); }
-    .project-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
-    .project-name { font-size: 1.0625rem; font-weight: 650; }
+    .project + .project { border-top: 1px solid var(--line); }
+    .project-summary { display: grid; grid-template-columns: minmax(0, 1fr) 1rem; gap: .2rem .8rem; padding-block: .85rem; list-style: none; cursor: pointer; }
+    .project-summary::-webkit-details-marker { display: none; }
+    .project-summary::after { content: ""; grid-column: 2; grid-row: 1 / 3; width: .45rem; height: .45rem; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: rotate(45deg); align-self: center; justify-self: center; }
+    .project-summary:hover .project-summary-title { color: var(--accent); }
+    .project-summary:focus-visible { outline: 3px solid #7395b2; outline-offset: 3px; border-radius: 2px; }
+    .project-summary-title { grid-column: 1; min-width: 0; font-size: .9375rem; font-weight: 650; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .project-summary-meta { grid-column: 1; display: flex; align-items: baseline; gap: .7rem; min-width: 0; color: var(--muted); font-size: .8125rem; line-height: 1.6; }
+    .project-period { flex: 0 0 auto; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .project-role { min-width: 0; padding-left: .7rem; border-left: 1px solid var(--line); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .project[open] .project-summary::after { transform: rotate(225deg); }
+    .project[open] .project-summary-title, .project[open] .project-role { white-space: normal; overflow: visible; text-overflow: clip; }
+    .project[open] .project-summary-meta { flex-wrap: wrap; }
+    .project-info { padding-bottom: .9rem; color: #536272; font-size: .875rem; }
+    .project-info dl { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: .5rem; }
+    .project-source { display: inline-block; margin-top: .5rem; }
     .publication-group + .publication-group { margin-top: 2rem; }
     .publication-list { list-style: none; margin: 1rem 0 0; padding: 0; }
     .publication + .publication { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
@@ -112,7 +124,6 @@
       .certification-table th, .certification-table td { padding-right: .5rem; }
       .certification-table th:last-child, .certification-table td:last-child { padding-right: 0; }
       .certification-date { font-size: .75rem; }
-      .project-fields { grid-template-columns: 1fr; }
       .footer-inner { min-height: 90px; padding-block: 1.2rem; }
     }
     @media (max-width: 360px) {
@@ -257,150 +268,78 @@
       </section>
       <section class="content-section" id="projects" aria-labelledby="projects-title">
         <div class="section-heading"><h2 id="projects-title">프로젝트</h2><span class="section-english">Selected projects</span></div>
-        <!-- 프로젝트: 아래 article 전체를 복사해서 프로젝트를 추가하세요.
-             각 dd 태그 안의 내용을 수정하면 됩니다.
-             시작일 최신순으로 정렬합니다. 역할은 본인이 담당한 업무에 맞게 수정하세요.
-             이 영역은 직접 작성한 내용만 표시합니다. -->
-        <article class="project" aria-label="폭설에 대응 가능한 모듈형 반자율주행 보도 및 이면도로 제설로봇">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 과학기술정보통신부, 행정안전부<br>전담: 한국연구재단</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/3f31eec3-c7ea-8003-a71d-c9ffa71a66ee">폭설에 대응 가능한 모듈형 반자율주행 보도 및 이면도로 제설로봇</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2026.09 ~ 2028.08</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">구동 플랫폼 디자인 및 하위 제어·자율주행 알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="복합에너지 시스템(MES) 및 지역에너지커뮤니티(LEC)의 설계 및 운영">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 기후에너지환경부<br>전담: 한국에너지기술평가원</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/33c1eec3-c7ea-8060-b7f8-e8ceba2805e8">복합에너지 시스템(MES) 및 지역에너지커뮤니티(LEC)의 설계 및 운영</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2025.10 ~ 2026.09</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">University of Tennessee, Knoxville(UTK) 6개월 파견<br>2026.03.17 ~ 2026.09.19</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="Few-shot data-driven 기반 미래 모빌리티 플랫폼의 구동, 비행 및 자율주행 제어 기법 연구">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 과학기술정보통신부<br>전담: 한국연구재단</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80da-aa0a-c935f5d6a11b">Few-shot data-driven 기반 미래 모빌리티 플랫폼의 구동, 비행 및 자율주행 제어 기법 연구</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2025.09 ~ 2027.08</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">주행·비행 구동용 모터 감속기 개발 및 제어 알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="환자 이승 및 이동 보조 자율행동체 구현을 위한 지능 기술 개발 및 실증">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 과학기술정보통신부<br>전담: 정보통신기획평가원</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-8054-b652-e9fa6060bd76">환자 이승 및 이동 보조 자율행동체 구현을 위한 지능 기술 개발 및 실증</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2025.07 ~ 2027.12</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">하위 구동 제어 알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="초개인화 퍼스널 모빌리티 서비스 디자인 개발">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 산업통상자원부<br>전담: 한국산업기술평가관리원</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80fa-865e-fba462634407">초개인화 퍼스널 모빌리티 서비스 디자인 개발</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2025.04 ~ 2027.12</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">하위 구동 알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="Visual SLAM을 이용한 실내 자율주행 로봇 및 관제 시스템 개발">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">전담: 인천대학교</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name"><a class="text-link" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80b7-8025-e1776692471a">Visual SLAM을 이용한 실내 자율주행 로봇 및 관제 시스템 개발</a></dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2024.06 ~ 2024.12</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
-        <article class="project" aria-label="인천공항 터미널 폐기물 수집 및 이송로봇 개발">
-          <dl class="project-fields">
-            <div>
-              <dt>기관</dt>
-              <dd class="blank">지원: 산업통상자원부<br>전담: 한국로봇산업진흥원</dd>
-            </div>
-            <div>
-              <dt>프로젝트명</dt>
-              <dd class="blank project-name">인천공항 터미널 폐기물 수집 및 이송로봇 개발</dd>
-            </div>
-            <div>
-              <dt>기간</dt>
-              <dd class="blank">2023.04 ~ 2024.11</dd>
-            </div>
-            <div>
-              <dt>역할</dt>
-              <dd class="blank">UWB 위치 추종 및 플랫폼 SLAM·내비게이션 알고리즘 개발</dd>
-            </div>
-          </dl>
-        </article>
+        <!-- 프로젝트: 아래 details 전체를 복사해서 프로젝트를 추가하세요.
+             project-summary-title은 과제명, project-period는 기간, project-role은 본인 역할입니다.
+             기본 두 줄로 표시하며 펼치면 전체 내용과 기관 정보를 볼 수 있습니다. 시작일 최신순으로 정렬합니다. -->
+        <details class="project" aria-label="폭설에 대응 가능한 모듈형 반자율주행 보도 및 이면도로 제설로봇">
+          <summary class="project-summary">
+            <span class="project-summary-title">폭설에 대응 가능한 모듈형 반자율주행 보도 및 이면도로 제설로봇</span>
+            <span class="project-summary-meta"><span class="project-period">2026.09 ~ 2028.08</span><span class="project-role">구동 플랫폼 디자인 및 하위 제어·자율주행 알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 과학기술정보통신부, 행정안전부<br>전담: 한국연구재단</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/3f31eec3-c7ea-8003-a71d-c9ffa71a66ee">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="복합에너지 시스템(MES) 및 지역에너지커뮤니티(LEC)의 설계 및 운영">
+          <summary class="project-summary">
+            <span class="project-summary-title">복합에너지 시스템(MES) 및 지역에너지커뮤니티(LEC)의 설계 및 운영</span>
+            <span class="project-summary-meta"><span class="project-period">2025.10 ~ 2026.09</span><span class="project-role">University of Tennessee, Knoxville(UTK) 6개월 파견 · 2026.03.17 ~ 2026.09.19</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 기후에너지환경부<br>전담: 한국에너지기술평가원</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33c1eec3-c7ea-8060-b7f8-e8ceba2805e8">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="Few-shot data-driven 기반 미래 모빌리티 플랫폼의 구동, 비행 및 자율주행 제어 기법 연구">
+          <summary class="project-summary">
+            <span class="project-summary-title">Few-shot data-driven 기반 미래 모빌리티 플랫폼의 구동, 비행 및 자율주행 제어 기법 연구</span>
+            <span class="project-summary-meta"><span class="project-period">2025.09 ~ 2027.08</span><span class="project-role">주행·비행 구동용 모터 감속기 개발 및 제어 알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 과학기술정보통신부<br>전담: 한국연구재단</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80da-aa0a-c935f5d6a11b">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="환자 이승 및 이동 보조 자율행동체 구현을 위한 지능 기술 개발 및 실증">
+          <summary class="project-summary">
+            <span class="project-summary-title">환자 이승 및 이동 보조 자율행동체 구현을 위한 지능 기술 개발 및 실증</span>
+            <span class="project-summary-meta"><span class="project-period">2025.07 ~ 2027.12</span><span class="project-role">하위 구동 제어 알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 과학기술정보통신부<br>전담: 정보통신기획평가원</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-8054-b652-e9fa6060bd76">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="초개인화 퍼스널 모빌리티 서비스 디자인 개발">
+          <summary class="project-summary">
+            <span class="project-summary-title">초개인화 퍼스널 모빌리티 서비스 디자인 개발</span>
+            <span class="project-summary-meta"><span class="project-period">2025.04 ~ 2027.12</span><span class="project-role">하위 구동 알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 산업통상자원부<br>전담: 한국산업기술평가관리원</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80fa-865e-fba462634407">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="Visual SLAM을 이용한 실내 자율주행 로봇 및 관제 시스템 개발">
+          <summary class="project-summary">
+            <span class="project-summary-title">Visual SLAM을 이용한 실내 자율주행 로봇 및 관제 시스템 개발</span>
+            <span class="project-summary-meta"><span class="project-period">2024.06 ~ 2024.12</span><span class="project-role">알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>전담: 인천대학교</dd></dl>
+            <a class="text-link project-source" href="https://unicon.hanyang.ac.kr/projects/33b1eec3-c7ea-80b7-8025-e1776692471a">연구실 상세 페이지</a>
+          </div>
+        </details>
+        <details class="project" aria-label="인천공항 터미널 폐기물 수집 및 이송로봇 개발">
+          <summary class="project-summary">
+            <span class="project-summary-title">인천공항 터미널 폐기물 수집 및 이송로봇 개발</span>
+            <span class="project-summary-meta"><span class="project-period">2023.04 ~ 2024.11</span><span class="project-role">UWB 위치 추종 및 플랫폼 SLAM·내비게이션 알고리즘 개발</span></span>
+          </summary>
+          <div class="project-info">
+            <dl><dt>기관</dt><dd>지원: 산업통상자원부<br>전담: 한국로봇산업진흥원</dd></dl>
+          </div>
+        </details>
       </section>
       <!-- 논문 기록: 각 publication 항목을 수정하거나 복사하세요. 저널과 컨퍼런스를 구분하고 각 목록을 최신순으로 표시합니다. -->
       <section class="content-section" id="publications" aria-labelledby="publications-title">
