@@ -31,10 +31,8 @@
     .top-nav a { padding-block: .5rem; }
     .masthead { color: #fff; background: #20354b; border-bottom: 4px solid #adc0cf; }
     .masthead-inner { padding-block: 3.1rem 3.4rem; }
-    .eyebrow { font-size: .8125rem; letter-spacing: .15em; font-weight: 600; color: #bdccd9; }
     h1 { margin-block: .5rem .45rem; font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.2; font-weight: 600; letter-spacing: -.045em; }
-    .motto-title { max-width: 60rem; font-size: clamp(1.6rem, 3.5vw, 2.5rem); line-height: 1.4; letter-spacing: -.025em; }
-    .motto-title span { display: block; }
+    .motto-title { margin-block: 0 .5rem; font-size: clamp(1.25rem, 2.7vw, 2.15rem); line-height: 1.4; letter-spacing: -.025em; }
     .masthead-description { color: #d8e2eb; font-size: 1rem; }
     .page-layout { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 4.4rem; padding-block: 3.5rem 5rem; align-items: start; }
     .profile { position: sticky; top: 2rem; }
@@ -132,7 +130,7 @@
     @media print {
       .top-nav, .side-nav, .skip-link { display: none; }
       .masthead { background: #fff; color: #20354b; }
-      .eyebrow, .masthead-description { color: #536272; }
+      .masthead-description { color: #536272; }
       .profile { position: static; margin-bottom: 2rem; }
       .page-layout { display: block; }
       .content-section { break-inside: avoid; }
@@ -150,8 +148,7 @@
   <div class="masthead" id="top">
     <div class="masthead-inner wrap">
       <!-- 좌우명: 영문은 motto-title, 한글은 masthead-description에서 수정하세요. -->
-      <p class="eyebrow">MY MOTTO</p>
-      <h1 class="motto-title" lang="en"><span>Rather than failing while doing nothing,</span> <span>let’s try and fail.</span></h1>
+      <h1 class="motto-title" lang="en">Rather than failing while doing nothing, let’s try and fail.</h1>
       <p class="masthead-description">안 해보고 실패할 바엔, 시도해보고 실패하자.</p>
     </div>
   </div>
