@@ -63,6 +63,17 @@
     .education-date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .education-detail { min-width: 0; }
     h3 { font-size: 1.0625rem; line-height: 1.6; font-weight: 650; }
+    .certification-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+    .certification-table col:nth-child(1) { width: 34%; }
+    .certification-table col:nth-child(2) { width: 41%; }
+    .certification-table col:nth-child(3) { width: 25%; }
+    .certification-table th, .certification-table td { padding: .65rem .75rem .65rem 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    .certification-table th:last-child, .certification-table td:last-child { padding-right: 0; }
+    .certification-table thead th { padding-top: 0; color: var(--muted); font-size: .8125rem; font-weight: 500; }
+    .certification-table th[scope="row"] { font-weight: 500; }
+    .certification-table td { color: #536272; }
+    .certification-table .certification-group-label th { padding-top: 1.1rem; border-bottom: 0; color: var(--accent); font-size: .875rem; font-weight: 650; }
+    .certification-date { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
     .research-intro { margin-bottom: 1rem; color: #536272; font-size: .9375rem; line-height: 1.85; }
     .research-interests > div, .skills-list > div { display: grid; grid-template-columns: 10.5rem minmax(0, 1fr); gap: 1rem; padding-block: .65rem; align-items: baseline; }
     .research-interests > div + div, .skills-list > div + div { border-top: 1px solid var(--line); }
@@ -116,6 +127,10 @@
       .research-interests > div, .skills-list > div { grid-template-columns: 1fr; gap: .2rem; }
       .project-meta { flex-wrap: wrap; }
       .project-role { flex-basis: 100%; padding-left: 0; border-left: 0; }
+      .certification-table { font-size: .8125rem; }
+      .certification-table th, .certification-table td { padding-right: .5rem; }
+      .certification-table th:last-child, .certification-table td:last-child { padding-right: 0; }
+      .certification-date { font-size: .75rem; }
       .footer-inner { min-height: 90px; padding-block: 1.2rem; }
     }
     @media (max-width: 360px) {
@@ -139,7 +154,7 @@
   <a class="skip-link" href="#main">본문으로 바로가기</a>
   <header class="site-header wrap">
     <a class="wordmark" href="#top">Research Portfolio</a>
-    <nav class="top-nav" aria-label="주 메뉴"><a href="#about">소개</a><a href="#skills">스킬</a><a href="#projects">프로젝트</a><a href="#publications">논문</a><a href="#study">공부 노트</a></nav>
+    <nav class="top-nav" aria-label="주 메뉴"><a href="#about">소개</a><a href="#skills">스킬</a><a href="#projects">프로젝트</a><a href="#publications">논문</a><a href="#study">공부 노트</a><a href="#certifications">자격증</a></nav>
   </header>
   <div class="masthead" id="top">
     <div class="masthead-inner wrap">
@@ -164,7 +179,7 @@
       </dl>
       <div class="profile-links"><a class="text-link" href="https://github.com/Mirnamu">GitHub</a></div>
       <nav class="side-nav" aria-label="본문 목차">
-        <a href="#about">소개</a><a href="#education">학력 및 경력</a><a href="#research">연구 관심 분야</a><a href="#skills">스킬</a><a href="#projects">프로젝트</a><a href="#publications">논문 기록</a><a href="#study">공부 노트</a>
+        <a href="#about">소개</a><a href="#education">학력 및 경력</a><a href="#research">연구 관심 분야</a><a href="#skills">스킬</a><a href="#projects">프로젝트</a><a href="#publications">논문 기록</a><a href="#study">공부 노트</a><a href="#certifications">자격증</a>
       </nav>
     </aside>
     <div class="content">
@@ -344,6 +359,55 @@
           -->
           <p class="study-empty">아직 등록된 공부 노트가 없습니다.</p>
         </div>
+      </section>
+      <section class="content-section" id="certifications" aria-labelledby="certifications-title">
+        <div class="section-heading"><h2 id="certifications-title">자격증</h2><span class="section-english">Licenses &amp; Certifications</span></div>
+        <!-- 자격증: 각 tr 안의 자격명, 발급기관, 취득일을 수정하세요. 추가하려면 해당 분류의 tr 블록을 복사하세요. -->
+        <table class="certification-table" aria-label="자격증 발급기관 및 취득일">
+          <colgroup><col><col><col></colgroup>
+          <thead><tr><th scope="col">자격명</th><th scope="col">발급기관</th><th scope="col">취득일</th></tr></thead>
+          <tbody>
+            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운전면허</th></tr>
+            <tr>
+              <th scope="row">1종 보통</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2018-03-09">2018.03.09</time></td>
+            </tr>
+            <tr>
+              <th scope="row">1종 대형</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-02-10">2021.02.10</time></td>
+            </tr>
+            <tr>
+              <th scope="row">특수(대형견인)</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-12-27">2021.12.27</time></td>
+            </tr>
+            <tr>
+              <th scope="row">특수(구난차)</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2021-04-30">2021.04.30</time></td>
+            </tr>
+            <tr>
+              <th scope="row">2종 소형</th>
+              <td>경기도남부경찰청</td>
+              <td><time class="certification-date" datetime="2022-11-24">2022.11.24</time></td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr class="certification-group-label"><th scope="rowgroup" colspan="3">운송 자격</th></tr>
+            <tr>
+              <th scope="row">버스운전자격증</th>
+              <td>한국교통안전공단</td>
+              <td><time class="certification-date" datetime="2020-09-24">2020.09.24</time></td>
+            </tr>
+            <tr>
+              <th scope="row">화물운송자격증</th>
+              <td>한국교통안전공단</td>
+              <td><time class="certification-date" datetime="2020-10-05">2020.10.05</time></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>
